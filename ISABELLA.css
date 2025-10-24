@@ -1,0 +1,119 @@
+/* ------------------ BASE ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #ffc2d4, #ff8ab8, #ffa4c2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5a2a3a;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ------------------ CARTA ------------------ */
+.carta {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  border-radius: 25px;
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 520px;
+  text-align: center;
+  box-shadow: 0 8px 35px rgba(255, 100, 150, 0.3);
+  animation: fadeIn 2s ease forwards;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #e61e73;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 2px 10px rgba(230, 30, 115, 0.3);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #60263a;
+}
+
+.firma {
+  margin-top: 2rem;
+  font-weight: bold;
+  color: #d62870;
+  font-size: 1.1rem;
+}
+
+/* ------------------ CORAZONES ------------------ */
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.heart {
+  position: absolute;
+  bottom: -10px;
+  color: #ff5f9e;
+  font-size: 1.2rem;
+  animation: float 6s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.3);
+    opacity: 0;
+  }
+}
+
+/* ------------------ ANIMACIONES ------------------ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width: 600px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  .carta {
+    padding: 2rem 1.3rem;
+    border-radius: 20px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  p {
+    font-size: 0.97rem;
+    line-height: 1.6;
+  }
+
+  .firma {
+    font-size: 1rem;
+  }
+}
